@@ -1,7 +1,7 @@
 import { InitialContent } from "./components/InitialContent";
+import { QuartaSeção } from "./components/QuartaSeção";
 import { SecundariContent } from "./components/SegundariContent";
 import { TertiaryContent } from "./components/TertiaryContent";
-
 
 export default function Home() {
   return (
@@ -9,10 +9,7 @@ export default function Home() {
       <InitialContent />
       <SecundariContent />
       <TertiaryContent />
-
-
+      <QuartaSeção />
     </>
-
   );
 }
-
