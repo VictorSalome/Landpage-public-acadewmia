@@ -3,7 +3,10 @@ import { MdOutlineSportsBasketball } from "react-icons/md";
 
 export const PrimeiraSeção = () => {
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center px-2 sm:px-48 p-20 bg-[#080911] min-h-screen md:">
+    <div
+      id="primeira"
+      className="flex flex-col sm:flex-row justify-between items-center px-2 sm:px-48 p-20 bg-[#080911] min-h-screen md:"
+    >
       <div className="flex flex-col w-full sm:w-1/3 gap-10 order-2 sm:order-1 sm:self-center md:self-start md:gap-14">
         <div className="flex items-center gap-3 ">
           <MdOutlineSportsBasketball className="text-2xl text-red-500 " />

@@ -1,6 +1,6 @@
 export const SegundaSeção = () => {
   return (
-    <div
+    <div id="segunda"
       className="relative bg-no-repeat bg-cover bg-center min-h-screen w-full flex flex-col gap-10 justify-center items-center p-4"
       style={{ backgroundImage: "url('/imageSegundari.jpg')" }}
     >

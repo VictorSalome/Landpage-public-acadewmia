@@ -2,7 +2,7 @@ import React from "react";
 
 export const QuintaSeção = () => {
   return (
-    <div
+    <div id="quinta"
       className="bg-gray-100 p-4 h-screen relative bg-cover bg-center"
       style={{ backgroundImage: "url('/imageQuinta.jpg')" }}
     >

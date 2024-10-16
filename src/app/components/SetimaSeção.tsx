@@ -23,7 +23,7 @@ export const SetimaSeção = () => {
   };
 
   return (
-    <section className="p-8 h-screen flex flex-col justify-center items-center">
+    <section id="setima" className="p-8 h-screen flex flex-col justify-center items-center">
       <Toaster />
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">

@@ -2,7 +2,7 @@ import React from "react";
 
 export const QuartaSeção = () => {
   return (
-    <section
+    <section id="quarta"
       className="bg-gray-100 p-4 h-screen relative bg-cover bg-center"
       style={{ backgroundImage: "url('/imageQuarta.jpg')" }}
     >

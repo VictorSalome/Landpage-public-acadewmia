@@ -19,6 +19,16 @@ body {
   background: var(--background);
   font-family: var(--font-archivo), sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 @layer utilities {
   .text-balance {

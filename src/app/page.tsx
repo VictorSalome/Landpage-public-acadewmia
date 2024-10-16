@@ -6,11 +6,15 @@ import {
   QuintaSeção,
   SextaSeção,
   SetimaSeção,
+  Header,
+  Footer,
 } from "./components";
+
 
 export default function Home() {
   return (
     <>
+      <Header />
       <PrimeiraSeção />
       <SegundaSeção />
       <TerceiraSeção />
@@ -18,6 +22,7 @@ export default function Home() {
       <QuintaSeção />
       <SextaSeção />
       <SetimaSeção />
+      <Footer/>
     </>
   );
 }
