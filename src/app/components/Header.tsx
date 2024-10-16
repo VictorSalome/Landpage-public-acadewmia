@@ -73,7 +73,7 @@ export const Header = () => {
           </li>
         </ul>
         {/* Botão do menu hambúrguer para telas móveis */}
-        <div className="flex justify-between items-center gap-14 md:hidden list-none">
+        <div className="flex justify-between items-center gap-10 md:hidden list-none">
           <li>
             <a
               href="#primeira"
