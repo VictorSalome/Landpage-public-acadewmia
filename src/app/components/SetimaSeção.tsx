@@ -1,6 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 
 export const SetimaSeção = () => {
@@ -23,7 +28,10 @@ export const SetimaSeção = () => {
   };
 
   return (
-    <section id="setima" className="p-8 h-screen flex flex-col justify-center items-center">
+    <section
+      id="setima"
+      className="p-8 h-screen flex flex-col justify-center items-center"
+    >
       <Toaster />
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
@@ -101,12 +109,12 @@ export const SetimaSeção = () => {
               <FaWhatsapp />
             </a>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.linkedin.com/in/victorsalome/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-700 text-3xl"
+              className="text-blue-600 hover:text-blue-800 text-3xl"
             >
-              <FaFacebook />
+              <FaLinkedin />
             </a>
             <a
               href="https://www.instagram.com/"

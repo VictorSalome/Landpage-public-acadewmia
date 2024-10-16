@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -20,12 +20,12 @@ export const Footer = () => {
             <FaWhatsapp />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.linkedin.com/in/victorsalome/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-800 text-2xl"
           >
-            <FaFacebook />
+            <FaLinkedin />
           </a>
           <a
             href="https://www.instagram.com/victorsalome41/"
@@ -43,6 +43,8 @@ export const Footer = () => {
             GitHub:{" "}
             <a
               href="https://github.com/VictorSalome"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-600"
             >
               VictorSalome
@@ -52,6 +54,8 @@ export const Footer = () => {
             LinkedIn:{" "}
             <a
               href="https://www.linkedin.com/in/victorsalome/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-600"
             >
               Victor Salome
