@@ -1,6 +1,6 @@
 import { FaDumbbell, FaRunning, FaHeartbeat } from "react-icons/fa";
 
-export const TertiaryContent = () => {
+export const TerceiraSeção = () => {
   return (
     <div className="min-h-screen bg-[#080911] flex flex-col justify-center items-center p-4">
       <h2 className="text-white text-3xl sm:text-4xl mb-20 font-extrabold">

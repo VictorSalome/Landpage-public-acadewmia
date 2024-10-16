@@ -1,20 +1,23 @@
-import { InitialContent } from "./components/InitialContent";
-import { QuartaSeção } from "./components/QuartaSeção";
-import { QuintaSeção } from "./components/QuintaSeção";
-
-import { SecundariContent } from "./components/SegundariContent";
-import { SextaSeção } from "./components/SextaSeção";
-import { TertiaryContent } from "./components/TertiaryContent";
+import {
+  PrimeiraSeção,
+  SegundaSeção,
+  TerceiraSeção,
+  QuartaSeção,
+  QuintaSeção,
+  SextaSeção,
+  SetimaSeção,
+} from "./components";
 
 export default function Home() {
   return (
     <>
-      <InitialContent />
-      <SecundariContent />
-      <TertiaryContent />
+      <PrimeiraSeção />
+      <SegundaSeção />
+      <TerceiraSeção />
       <QuartaSeção />
       <QuintaSeção />
       <SextaSeção />
+      <SetimaSeção />
     </>
   );
 }
