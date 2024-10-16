@@ -3,6 +3,7 @@ import { QuartaSeção } from "./components/QuartaSeção";
 import { QuintaSeção } from "./components/QuintaSeção";
 
 import { SecundariContent } from "./components/SegundariContent";
+import { SextaSeção } from "./components/SextaSeção";
 import { TertiaryContent } from "./components/TertiaryContent";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <TertiaryContent />
       <QuartaSeção />
       <QuintaSeção />
+      <SextaSeção />
     </>
   );
 }

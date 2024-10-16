@@ -8,7 +8,7 @@ export const QuintaSeção = () => {
     >
       <div className="absolute inset-0 overflow-hidden"></div>
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 p-8 flex flex-col gap-5 items-center bg-white rounded-md shadow-lg w-11/12 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg lg:right-32 lg:transform lg:translate-x-0">
+      <div className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 p-8 flex flex-col gap-5 items-center bg-white rounded-2xl shadow-lg w-11/12 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg lg:right-32 lg:transform lg:translate-x-0">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-black font-extrabold text-center w-80">
           Dicas de bem-estar
         </h2>
