@@ -1,161 +1,122 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const handleMenuClick = () => setIsOpen(false);
 
-  const handleMenuClick = () => {
-    setIsOpen(false); // Fecha o menu ao clicar em um item
-  };
+  const menuItems = [
+    { href: "#primeira", label: "Início" },
+    { href: "#segunda", label: "Sobre" },
+    { href: "#terceira", label: "Recursos" },
+    { href: "#quarta", label: "Serviços" },
+    { href: "#sexta", label: "Avaliações" },
+    { href: "#setima", label: "Contato" }
+  ];
+
+  const MenuItem = ({ href, label }: { href: string; label: string }) => (
+    <motion.li
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <a
+        href={href}
+        className="text-neutral-100 hover:text-pink-400 transition-colors duration-300 text-lg font-medium"
+        onClick={handleMenuClick}
+      >
+        {label}
+      </a>
+    </motion.li>
+  );
 
   return (
-    <nav className="bg-[#935B47] p-4 shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="flex justify-end md:justify-center m:items-center gap-6">
-        <ul className="hidden md:flex justify-center gap-8">
-          <li>
-            <a
-              href="#primeira"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Início
-            </a>
-          </li>
-          <li>
-            <a
-              href="#segunda"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Sobre
-            </a>
-          </li>
-          <li>
-            <a
-              href="#terceira"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Principais recursos
-            </a>
-          </li>
-          <li>
-            <a
-              href="#quarta"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Exercícios
-            </a>
-          </li>
-          <li>
-            <a
-              href="#sexta"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Depoimentos
-            </a>
-          </li>
-          <li>
-            <a
-              href="#setima"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Contato
-            </a>
-          </li>
-        </ul>
-        {/* Botão do menu hambúrguer para telas móveis */}
-        <div className="flex justify-between items-center gap-10 md:hidden list-none">
-          <li>
-            <a
-              href="#primeira"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Início
-            </a>
-          </li>
-          <li>
-            <a
-              href="#segunda"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Sobre
-            </a>
-          </li>
+    <nav className="fixed top-0 left-0 w-full z-50 bg-neutral-900/95 backdrop-blur-sm p-4 shadow-lg">
+      <div className="container mx-auto">
+        <div className="flex justify-between items-center">
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center gap-8">
+            {menuItems.map((item) => (
+              <MenuItem key={item.href} {...item} />
+            ))}
+          </ul>
 
-          <li>
-            <a
-              href="#terceira"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Principais recursos
-            </a>
-          </li>
-        </div>{" "}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden flex items-center focus:outline-none"
-        >
-          <svg
-            className="w-6 h-6 text-black"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          {/* Mobile Menu - Logo/Brand */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="md:hidden text-2xl font-bold text-white"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-      </div>
+            Viva a Vida
+          </motion.div>
 
-      {/* Menu de navegação para telas pequenas (mobile) */}
-      {isOpen && (
-        <ul className="md:hidden flex flex-col items-center gap-4 mt-4">
-          <li>
-            <a
-              href="#quarta"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
+          {/* Mobile Menu Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-lg bg-pink-500 hover:bg-pink-600 transition-colors duration-300"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Exercícios
-            </a>
-          </li>
-          <li>
-            <a
-              href="#sexta"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </motion.button>
+        </div>
+
+        {/* Mobile Menu - Dropdown */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden overflow-hidden"
             >
-              Depoimentos
-            </a>
-          </li>
-          <li>
-            <a
-              href="#setima"
-              className="hover:text-blue-600 text-black"
-              onClick={handleMenuClick}
-            >
-              Contato
-            </a>
-          </li>
-        </ul>
-      )}
+              <motion.ul 
+                className="flex flex-col items-center gap-6 py-6"
+                initial="closed"
+                animate="open"
+                variants={{
+                  open: {
+                    transition: { staggerChildren: 0.1 }
+                  },
+                  closed: {
+                    transition: { staggerChildren: 0.05, staggerDirection: -1 }
+                  }
+                }}
+              >
+                {menuItems.map((item) => (
+                  <motion.div
+                    key={item.href}
+                    variants={{
+                      open: { y: 0, opacity: 1 },
+                      closed: { y: 20, opacity: 0 }
+                    }}
+                  >
+                    <MenuItem {...item} />
+                  </motion.div>
+                ))}
+              </motion.ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </nav>
   );
 };
