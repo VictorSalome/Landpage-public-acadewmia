@@ -16,6 +16,11 @@ export const Footer = () => {
       href: "https://www.instagram.com/victorsalome41/",
       icon: <FaInstagram />,
       className: "text-gray-300 hover:text-white"
+    },
+    {
+      href: "https://github.com/VictorSalome",
+      icon: <FaGithub />,
+      className: "text-gray-300 hover:text-white"
     }
   ];
 
